@@ -382,27 +382,27 @@ describe("Test renderStatsCard", () => {
       document.querySelector(
         'g[transform="translate(0, 0)"]>.stagger>.stat.bold',
       ).textContent,
-    ).toMatchInlineSnapshot(`"获标星数（star）:"`);
+    ).toBe("获标星数（star）:");
     expect(
       document.querySelector(
         'g[transform="translate(0, 25)"]>.stagger>.stat.bold',
       ).textContent,
-    ).toMatchInlineSnapshot(`"累计提交数（commit） (2023):"`);
+    ).toBe(`累计提交数（commit） (${new Date().getFullYear()}):`);
     expect(
       document.querySelector(
         'g[transform="translate(0, 50)"]>.stagger>.stat.bold',
       ).textContent,
-    ).toMatchInlineSnapshot(`"拉取请求数（PR）:"`);
+    ).toBe("拉取请求数（PR）:");
     expect(
       document.querySelector(
         'g[transform="translate(0, 75)"]>.stagger>.stat.bold',
       ).textContent,
-    ).toMatchInlineSnapshot(`"指出问题数（issue）:"`);
+    ).toBe("指出问题数（issue）:");
     expect(
       document.querySelector(
         'g[transform="translate(0, 100)"]>.stagger>.stat.bold',
       ).textContent,
-    ).toMatchInlineSnapshot(`"贡献于（去年）:"`);
+    ).toBe("贡献于（去年）:");
   });
 
   it("should render without rounding", () => {
